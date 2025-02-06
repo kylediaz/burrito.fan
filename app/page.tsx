@@ -27,13 +27,11 @@ export default function Home() {
     <div>
       <header className={styles.header}>burrito.fan</header>
       <div className={styles.mainContainer}>
-        <section id="map" className={styles.mapContainer}>
-          <Map
-            burritos={burritos}
-            focusedEntry={focusedEntry}
-            setFocusedEntry={setFocusedEntry}
-          />
-        </section>
+        <Map
+          burritos={burritos}
+          focusedEntry={focusedEntry}
+          setFocusedEntry={setFocusedEntry}
+        />
         <section
           className={`${styles.reviewsContainer} sm:w-1/2 w-full h-2/3 sm:h-full`}
         >

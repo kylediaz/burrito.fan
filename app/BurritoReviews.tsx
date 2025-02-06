@@ -12,6 +12,13 @@ export interface Props {
 function BurritoReviews(props: Props) {
   const { burritos, focusedEntry, setFocusedEntry } = props;
 
+  const element = document.getElementById(`burrito-review-${focusedEntry}`);
+  element?.scrollIntoView({
+    behavior: "smooth",
+    block: "end",
+    inline: "nearest",
+  });
+
   return (
     <div>
       <Header burritos={burritos} />

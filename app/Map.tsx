@@ -1,12 +1,6 @@
 "use client";
 
-import React, {
-  useRef,
-  useEffect,
-  SetStateAction,
-  Dispatch,
-  useMemo,
-} from "react";
+import React, { SetStateAction, Dispatch, Component } from "react";
 
 import mapboxgl, { Marker, LngLat } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
@@ -50,87 +44,87 @@ export interface Props {
   setFocusedEntry: Dispatch<SetStateAction<number>>;
 }
 
-const Map = (props: Props) => {
-  const { burritos, focusedEntry, setFocusedEntry } = props;
+class Map extends Component {
+  markers: Marker[] = [];
+  map: mapboxgl.Map | null = null;
 
-  const mapContainerRef: React.RefObject<HTMLDivElement | null> = useRef(null);
-  const mapRef: React.RefObject<mapboxgl.Map | null> = useRef(null);
-  const markersRef: React.RefObject<Marker[]> = useRef([]);
-
-  function focusOnNewMarker(idx: number) {
-    const map = mapRef.current;
-    const markers = markersRef.current;
-    const validIdx = 0 <= idx && idx < markers.length;
-    if (!validIdx || map == null) {
-      return;
-    }
-
-    const marker = markers[idx];
-    const distanceToTarget = map.getCenter().distanceTo(marker.getLngLat());
-    map.flyTo({
-      center: marker.getLngLat(),
-      zoom: Math.max(13.5, map.getZoom()),
-      duration: Math.min(1000 + distanceToTarget / 100, 7_000),
-    });
+  constructor(props: Props) {
+    super(props);
   }
 
-  useEffect(() => {
-    const markers = burritos.map((burrito) => {
+  componentDidMount() {
+    const { burritos, setFocusedEntry } = this.props as Props;
+
+    this.markers = burritos.map((burrito: BurritoReviewModel) => {
       return new mapboxgl.Marker({
         rotationAlignment: "horizon",
         clickTolerance: 1,
       }).setLngLat([burrito.long, burrito.lat]);
     });
-    markersRef.current = markers;
 
-    console.log("fortnite", mapContainerRef);
-    const map = new mapboxgl.Map({
-      container: mapContainerRef.current,
+    this.map = new mapboxgl.Map({
+      container: "map",
       style: process.env.NEXT_PUBLIC_MAPBOX_STYLE,
       center: [-99.7129, 40.0902],
       zoom: onMobile() ? 2 : 3,
       minZoom: 2,
     });
-    mapRef.current = map;
 
-    markers
+    this.markers
       // Sort so further markers are rendered behind nearer markers
       .toSorted(
         (a: mapboxgl.Marker, b: mapboxgl.Marker) =>
           b.getLngLat().lat - a.getLngLat().lat,
       )
       .forEach((marker: mapboxgl.Marker) => {
-        if (map != null) {
-          marker.addTo(map);
+        if (this.map != null) {
+          marker.addTo(this.map);
         }
       });
 
-    map.on("click", (e) => {
+    this.map.on("click", (e) => {
       const clickPos = e.lngLat;
-      const closestMarkerIndex = findClosestMarkerToPoint(markers, clickPos);
+      const closestMarkerIndex = findClosestMarkerToPoint(
+        this.markers,
+        clickPos,
+      );
 
       if (closestMarkerIndex == null) {
         return;
       }
 
-      const element = document.getElementById(
-        `burrito-review-${closestMarkerIndex}`,
-      );
-      element?.scrollIntoView({
-        behavior: "smooth",
-        block: "end",
-        inline: "nearest",
-      });
-
+      this.focusOnNewMarker(closestMarkerIndex);
       setFocusedEntry(closestMarkerIndex);
     });
-  });
+  }
 
-  useEffect(() => focusOnNewMarker(focusedEntry), [focusedEntry]);
+  render() {
+    return (
+      <section className={styles.mapContainer}>
+        <div className={`${styles.mapStyle} mapboxgl-map`} id="map" />
+      </section>
+    );
+  }
 
-  return (
-    <div className={`${styles.mapStyle} mapboxgl-map`} ref={mapContainerRef} />
-  );
-};
+  focusOnNewMarker(idx: number) {
+    const validIdx = 0 <= idx && idx < this.markers.length;
+    console.log("fortnite", idx, this.map);
+    if (!validIdx || this.map == null) {
+      return;
+    }
+
+    console.log("hi");
+
+    const marker = this.markers[idx];
+    const distanceToTarget = this.map
+      .getCenter()
+      .distanceTo(marker.getLngLat());
+    this.map.flyTo({
+      center: marker.getLngLat(),
+      zoom: Math.max(13.5, this.map.getZoom()),
+      duration: Math.min(1000 + distanceToTarget / 100, 7_000),
+    });
+  }
+}
 
 export default Map;

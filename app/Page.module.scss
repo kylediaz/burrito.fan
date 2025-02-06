@@ -13,15 +13,6 @@ header.header {
     height: calc(100vh - $header-height);
 }
 
-.mapContainer {
-    flex: 1;
-    @media only screen and (max-width: $mobile-breakpoint) {
-        display: block;
-        border-right: none;
-        flex: 100%;
-    }
-}
-
 .reviewsContainer {
     max-height: 100%;
     overflow-y: scroll;
