@@ -18,39 +18,9 @@ function onMobile(): boolean {
   return window.innerWidth < 900;
 }
 
-function findClosestMarkerToPoint(
-  markers: Marker[],
-  point: LngLat,
-): number | null {
-  //const threshold = clamp(50_000 / map.current.getZoom(), 10, 100_000);
-  const threshold = 100_000;
-
-  let closestMarkerIndex: number | null = null;
-  let closestDistance = Infinity;
-  for (const index in markers) {
-    const marker = markers[index];
-    const distance = point.distanceTo(marker.getLngLat());
-    if (distance < threshold && distance < closestDistance) {
-      closestMarkerIndex = parseInt(index);
-      closestDistance = distance;
-    }
-  }
-  return closestMarkerIndex;
-}
-
-export interface Props {
-  burritos: BurritoReviewModel[];
-  focusedEntry: number;
-  setFocusedEntry: Dispatch<SetStateAction<number>>;
-}
-
 class Map extends Component {
   markers: Marker[] = [];
   map: mapboxgl.Map | null = null;
-
-  constructor(props: Props) {
-    super(props);
-  }
 
   componentDidMount() {
     const { burritos, setFocusedEntry } = this.props as Props;
@@ -84,18 +54,18 @@ class Map extends Component {
 
     this.map.on("click", (e) => {
       const clickPos = e.lngLat;
-      const closestMarkerIndex = findClosestMarkerToPoint(
-        this.markers,
-        clickPos,
-      );
+      const closestMarkerIndex = this.findClosestMarker(clickPos);
 
-      if (closestMarkerIndex == null) {
-        return;
+      if (closestMarkerIndex != null) {
+        setFocusedEntry(closestMarkerIndex);
       }
-
-      this.focusOnNewMarker(closestMarkerIndex);
-      setFocusedEntry(closestMarkerIndex);
     });
+  }
+
+  componentDidUpdate(prevProps: Props) {
+    if (this.props.focusedEntry !== prevProps.focusedEntry) {
+      this.focusOnNewMarker(this.props.focusedEntry);
+    }
   }
 
   render() {
@@ -108,12 +78,9 @@ class Map extends Component {
 
   focusOnNewMarker(idx: number) {
     const validIdx = 0 <= idx && idx < this.markers.length;
-    console.log("fortnite", idx, this.map);
     if (!validIdx || this.map == null) {
       return;
     }
-
-    console.log("hi");
 
     const marker = this.markers[idx];
     const distanceToTarget = this.map
@@ -125,6 +92,25 @@ class Map extends Component {
       duration: Math.min(1000 + distanceToTarget / 100, 7_000),
     });
   }
+
+  findClosestMarker(clickPos: LngLat): number | null {
+    let closestMarkerIndex = null;
+    let closestDistance = Infinity;
+    for (let i = 0; i < this.markers.length; i++) {
+      const distance = clickPos.distanceTo(this.markers[i].getLngLat());
+      if (distance < closestDistance) {
+        closestDistance = distance;
+        closestMarkerIndex = i;
+      }
+    }
+    return closestMarkerIndex;
+  }
+}
+
+export interface Props {
+  burritos: BurritoReviewModel[];
+  focusedEntry: number;
+  setFocusedEntry: Dispatch<SetStateAction<number>>;
 }
 
 export default Map;
