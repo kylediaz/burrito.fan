@@ -7,15 +7,11 @@ import React, {
   useEffect,
   RefObject,
 } from "react";
-import { BurritoReviewModel } from "./types";
+import { BurritoReviewModel, FocusedEntry } from "./types";
 import Header from "@/components/Header";
 import BurritoReview from "@/components/BurritoReview";
 
-export interface Props {
-  burritos: BurritoReviewModel[];
-  focusedEntry: number;
-  setFocusedEntry: Dispatch<SetStateAction<number>>;
-}
+import styles from "./BurritoReviews.module.scss";
 
 function BurritoReviews(props: Props) {
   const { burritos, focusedEntry, setFocusedEntry } = props;
@@ -24,45 +20,63 @@ function BurritoReviews(props: Props) {
   const reviewElements = new Array<React.JSX.Element>(burritos.length);
   for (let index = 0; index < burritos.length; index++) {
     const burrito = burritos[index];
-    const ref = useRef();
+    const ref: RefObject<HTMLElement> = useRef(null);
     reviewElementsRefs[index] = ref;
     reviewElements[index] = (
       <li key={index} id={`burrito-review-${index}`} ref={ref}>
-        <BurritoReview burrito={burrito} isFocused={focusedEntry == index} />
+        <BurritoReview
+          burrito={burrito}
+          isFocused={focusedEntry.idx == index}
+        />
       </li>
     );
   }
 
-  useEffect(() => {
-    reviewElementsRefs.forEach((ref, index) => {
-      const observer = new IntersectionObserver((entries) => {
-        const entry = entries[0];
-        console.log(entry.intersectionRatio);
-        if (entry.isIntersecting) {
-          setFocusedEntry(index);
-        }
-      });
-      observer.observe(ref.current);
-    });
-  }, []);
+  const handleScroll = (e) => {
+    console.log("scroll");
+    for (let index = 0; index < burritos.length; index++) {
+      const ref = reviewElementsRefs[index];
+      const rect = ref.current.getBoundingClientRect();
+      const middle = window.innerHeight / 2;
+      const inMiddle = Math.abs(rect.top - (middle - rect.height / 2)) < 5;
+      if (inMiddle && focusedEntry.idx != index) {
+        setFocusedEntry({ idx: index, source: "scroll" });
+      }
+    }
+  };
 
   useEffect(() => {
-    if (document != undefined) {
-      const element = document.getElementById(`burrito-review-${focusedEntry}`);
-      element?.scrollIntoView({
-        behavior: "smooth",
-        block: "end",
-        inline: "nearest",
-      });
+    if (
+      document == undefined ||
+      focusedEntry.source == "scroll" ||
+      focusedEntry.idx < 0
+    ) {
+      return;
     }
+    const element = document.getElementById(
+      `burrito-review-${focusedEntry.idx}`,
+    );
+    element?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+      inline: "nearest",
+    });
   }, [focusedEntry]);
 
   return (
-    <div>
-      <Header burritos={burritos} />
-      <ul>{reviewElements}</ul>
+    <div className={styles.outerContainer} onScroll={handleScroll}>
+      <div className={styles.innerContainer}>
+        <Header burritos={burritos} />
+        <ul>{reviewElements}</ul>
+      </div>
     </div>
   );
+}
+
+export interface Props {
+  burritos: BurritoReviewModel[];
+  focusedEntry: FocusedEntry;
+  setFocusedEntry: Dispatch<SetStateAction<FocusedEntry>>;
 }
 
 export default BurritoReviews;
