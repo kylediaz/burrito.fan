@@ -1,0 +1,64 @@
+$mobile-breakpoint: 639px;
+$header-height: 60px;
+
+header.header {
+    height: $header-height;
+    font-size: 40px;
+    padding: 5px 10px;
+}
+
+.mainContainer {
+    display: flex;
+    flex-wrap: wrap;
+    height: calc(100vh - $header-height);
+}
+
+.mapContainer {
+    @media only screen and (max-width: $mobile-breakpoint) {
+        display: block;
+        border-right: none;
+        flex: 100%;
+    }
+    flex: 1;
+}
+.mapStyle {
+    @media only screen and (max-width: $mobile-breakpoint) {
+        height: calc(40vh - 110px);
+    }
+    height: calc(100% - 20px);
+    margin: 10px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.reviewsContainer {
+    max-height: 100%;
+    overflow-y: scroll;
+    margin-top: 10px;
+    padding: 10px;
+    padding-top: 0;
+    padding-bottom: 9em;
+}
+
+.popupTitle {
+    background-color: #87bd41;
+    font-weight: 700;
+    font-size: medium;
+    color: ivory;
+    padding: 10px;
+}
+.popupInfo {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 10px;
+}
+.popupLabel {
+    font-weight: bold;
+}
+.popupWebUrl {
+    color: dodgerblue;
+}
+.popupWebUrl:active,
+.popupWebUrl:focus {
+    outline: 0;
+}

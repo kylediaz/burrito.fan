@@ -1,0 +1,692 @@
+- long: -73.35898052883293
+  lat: 40.80228561817504
+  name: Half Hollow Hills High School East
+  date: "2016"
+  count: 2
+  rating: 1
+  description: Saddest burritos ever.
+
+- long: -73.41085323026951
+  lat: 40.81477676420474
+  name: Chipotle Mexican Grill
+  date: "2018"
+  count: 3
+  rating: 1
+  description: Every day I regret wasting a meal on Chipotle.
+
+- long: -122.027413
+  lat: 37.36310329999999
+  name: El Caminito
+  date: "2022"
+  count: 1
+  rating: 3
+  description: First burrito in Cali at the start of my internship.
+
+- long: -122.0203899
+  lat: 37.3585626
+  name: La Familia Taqueria
+  date: "2022"
+  count: 30
+  rating: 4
+  description: |
+    I ate here maybe 30 times. This is the food truck that inspired my love for burrito. True kino. For $12, they gave you a sizeable burrito with chips and pickled jalapenos and raddish.
+
+- long: -122.0243301
+  lat: 37.362133
+  name: Garcia's Taqueria
+  date: "2022"
+  count: 7
+  rating: 4
+  description: |
+    On the thinner side, but they were truly majestic. Their rice has an insane flavor.
+    I felt really guily eating these burritos because I've usually eaten La Familia Taqueria on the same street. I was even on a first-name basis with La Familia Taqueria, but they got completely mogged by Garcia's. I felt like I was cheating on a long-term relationship. The burritos here tasted so good I was able to swallow the guilt along with each bite.
+
+- long: -121.8864891
+  lat: 37.3301714
+  name: "3 Hermanos Mexican Grill | Quesabirria Tacos"
+  date: "2022"
+  count: 1
+  rating: 1
+  description: |
+    Thumbs down.
+    No salsa verde. Their red salsa tastes weird. They don't even give enough of the salsa.
+    They don't sear shut their wrap. Their tomatoes taste like they came out of a tin can.
+
+- long: -73.9877989
+  lat: 40.71974179999999
+  name: Essex Taqueria
+  date: "2022"
+  count: 1
+  rating: 4
+  description: |
+    Tastes good, but their burritos cost $17, and they dont even come with chips. Bruh.
+    <br>
+    <i>This was one of my first burritos in NY. Little did I know but outside of California, Burritos almost never come with free chips</i>
+
+- long: -122.4180867
+  lat: 37.7508961
+  name: La Taqueria
+  date: "2022"
+  count: 1
+  rating: 5
+  description: |
+    This is where the famous Mission Burrito was invented. My friends and I made a pilgrimage to this holy site. It truly lived up to its hype.
+
+- long: -73.30986779999999
+  lat: 40.7662467
+  name: Cochinita porky food truck
+  date: "2022"
+  count: 2
+  rating: 4
+  description: |
+    Their burritos are very small, but they are truly something. They put plantains IN the burrito, alongside a bunch of other stuff I've never seen in a burrito. It adds a unique sweetness to it.
+
+- long: -122.3448913
+  lat: 47.6126735
+  name: Taco Del Mar
+  date: "2022"
+  rating: 2
+  description: It was ok.
+
+- long: -122.1476839
+  lat: 37.4843992
+  name: Meta Office
+  date: "2022"
+  count: 1
+  rating: 2
+  description: |
+    Office food. It was mid.
+    Somehow, it was extremely spicy.
+
+- long: -81.2489915
+  lat: 32.1424021
+  name: Moe's Southwest Grill
+  date: "2019"
+  count: 4
+  rating: 2
+  description: Better than Chipotle.
+
+- long: -73.4247571
+  lat: 40.7298636
+  name: QDOBA Mexican Eats
+  date: "2019"
+  count: 2
+  rating: 2
+  description: Better than Chipotle.
+
+- long: -73.9908687
+  lat: 40.7603366
+  name: El Rancho Burritos
+  date: "2023"
+  order: Californian burrito
+  count: 1
+  rating: 3
+  description: |
+    It was good.
+
+- long: -73.9959614
+  lat: 40.7199004
+  name: El Gallo Taqueria
+  date: "2022"
+  order: Lengua burrito
+  count: 1
+  rating: 3
+  description: |
+    First burrito in NYC.
+    It was pretty good.
+
+- long: -73.9902307
+  lat: 40.75582559999999
+  name: El Jefecito
+  date: "2023"
+  count: 1
+  rating: 3
+  description: |
+    It was ok.
+
+- long: -73.9906929
+  lat: 40.755415
+  name: Blue Maiz
+  date: "2023"
+  count: 1
+  rating: 2
+  description: |
+    Chipotle was the worst thing to happen to Mexican food. Every Mexican restaurant is a wannabe Chipotle with make-your-own burritos. I want a REAL burrito bro.
+    I built my own burrito here but like it was mic and it's NOT because I chose the ingredients. The ingredients themselves were kinda mid.
+
+- long: -73.9919902
+  lat: 40.7223137
+  name: Pinks Cantina - Grab n' Go LES
+  date: "2023"
+  count: 1
+  rating: 1
+  description: |
+    Literally the most awful thing I've ever eaten.
+    * The burrito tortilla was burnt, but somehow, the cheese was not melted.
+    * Served with diced tomatoes as salsa, which isn't good. Most burritos are served with liquid salsa to pour on top of the burrito as a sauce. What am I supposed to do with diced tomatoes? Additionally, they tasted like they came from a can.
+    * Burrito was literally 70% rice.
+    * The burrito was completely dry. There was no sour cream or anything. Normally that's fine because I could just pour salsa on it - but remember, all I had was diced tomatoes.
+
+- long: -81.2435691315117
+  lat: 32.1330977630324
+  name: One Last Taco
+  date: "2023"
+  count: 1
+  rating: 2
+  description: |
+    It was ok.
+
+- long: -81.28223299999999
+  lat: 32.1276686
+  name: Flacos House 3
+  date: "2023"
+  count: 3
+  order: Californian Burrito Flacos Style w/ Carne Asada.
+  rating: 4
+  description: |
+    Owner was arrested for meth trafficking and arming a minor with a pistol. Burrito tasted awesome regardless (maybe even better).
+
+- long: -118.25099316945536
+  lat: 34.044039231126646
+  name: Happy Burrito
+  date: 2024-03-01
+  count: 1
+  order: Super Burrito, Californian Style, Refied beans and Cilantro rice.
+  rating: 4
+  description: |
+    First burrito in LA.
+    The guy who worked there was very chill.
+    First Californian Burrito in almost 2 years. I almost cried. It's exactly as I remember it. He even gave me a side of pickled radish and extremely good red and green salsa - which is how ALL burritos should be served.
+
+- long: -118.24887819658414
+  lat: 34.05071813613084
+  name: Roast To Go
+  date: 2024-03-02
+  count: 1
+  order: Burrito w/ Cabeza, Spicy salsa
+  rating: 4
+  description: |
+    This was probably the most barebones burrito I've ever had, but it absolutely slayed.
+    The burrito was literally just rice, meat, and salsa - the barebones essentials, but each ingredient was absolutely perfect. The rice and meat were so soft and fluffy; I felt like I was eating a giant meat marshmallow. There weren't that many spices, but did the burrito really need it? It was perfect as is.
+
+- long: -114.96370789233399
+  lat: 36.01143488279135
+  name: Mom's Kitchen
+  date: 2024-03-04
+  count: .5
+  order: Chorizo Burrito (Mom's Favorite)
+  rating: 1
+  description: |
+    She was the mom I've always wanted.
+    The restaurant is owned the nicest abuela ever - "Mom". She's a little old woman who kept making sure were were ok, bringing an absurd amount of free chips and salsa to our table, calling us her muchahos and guapo, and giving us little hugs.
+    The chips and salsa were really good. The chips had a surprising amount of flavor on their own, and the salsa had the perfect blend of spicy and sweet while definitely being freshly made. Nirmal ordered orange juice which looked homemade.
+    The burrito itself... I'm sorry Mom, but I didn't like it. This was my first breakfast burrito so I'm hoping it's just that I don't like them, but between the chorizo, scrambled eggs, cheese, and hash the burrito was incredibly dry. It kinda hurt to eat. No matter how much of her great salsa or hot sauce I poured on top, it still was hard to eat.
+    The flavor of the burrito didn't work either. All the ingredients came together into this weird homogenous taste without any distinction. It tasted like numbness.
+    I was able to power through several bites through the power of my love for Mom, but unfortunately it wasn't enough.
+    I'm sorry Mom, but I've become a pretentious douche.
+
+- long: -73.9043078059541
+  lat: 40.74542112880784
+  name: Don Panchito Food Truck
+  date: 2024-03-08
+  count: 1
+  order: Beef Burrito
+  rating: 3
+  description: |
+    Rice and meat were nicely spiced.
+    There was crunchy and creamy coleslaw inside, which matched really well with the rice and meat.
+    Overall, it tasted good but didn't taste great or anything. I'm not sure why. Maybe I'm just tired.
+
+- long: -81.2528935952285
+  lat: 32.10569541013653
+  name: Flacos House 1
+  date: 2024-03-10
+  count: 1
+  order: Birria Burrito w/ "Big Boy" Spicy Salsa
+  rating: 3
+  description: |
+    Since I loved Flacos Tacos 3, I thought I'd visit the *original* Flacos restaurant, conventiently right around the corner.
+    It wasn't as good.
+
+- long: -73.97097878256393
+  lat: 40.69338632237572
+  name: Tacos Lupita 2
+  date: 2024-03-28
+  count: 1
+  order: Cabeza Burrito
+  rating: 4
+  description: Pretty good. Salsa was spicy.
+
+- long: -74.0032070804701
+  lat: 40.74148313666741
+  name: Google Office Burritos
+  date: 2024-04-02
+  count: 1
+  order: Whole wheat tortilla, refried beans, pork, spicy salsa, lettuce, tomatoes
+  rating: 1
+  description: |
+    The meat was hard to chew and didn't really taste that good. Another W for Meta.
+
+- long: -73.98698258787304
+  lat: 40.688086154913904
+  name: Fast and Fresh Burrito Deli
+  date: 2024-04-19
+  count: 1
+  rating: 2
+  description: Meat was too tough, and overall kinda dry.
+
+- long: -73.9857328684074
+  lat: 40.75378920116037
+  name: Some burrito truck
+  date: 2024-06-07
+  count: 1
+  order: Birria Burrito
+  rating: 4
+  description:
+    Can't find the taco truck on google maps but it was pretty dope. I think
+    they make their salsa verde using only jalapenos which I haven't really
+    seen.
+
+- long: -73.2852785690928
+  lat: 40.80282688429486
+  name: Taco Bus
+  date: 2024-06-23
+  count: 1
+  order: Lengua Burrito
+  rating: 4
+  description: |
+    This was a school bus that was converted into a food truck.
+    It also happens to be right next to some woods that contain an abandoned lobotomy hospital, and is also where MS-13 beheads people.
+    Prior to eating here, my friends and I tried to see the hospital but we instantly got caught by two police cars.
+    This burrito was unironically one of the best I've had in New York.
+
+- long: -73.42524609097578
+  lat: 40.74485396871144
+  name: Cochinita porky food truck
+  date: "2022"
+  rating: 3
+  description: |
+    This is right outside Restaurant Depot - which sells food and supplies in bulk for restaurants. I'd never need it, but I've never been so tempted to buy 20 gallon buckets of mustard simply because it was so cheap.
+    The burrito was good, but too oily.
+
+- long: -74.00148899397756
+  lat: 40.74195304045631
+  name: Electric Burrito
+  date: 2024-06-26
+  count: 1
+  rating: 2
+  description: |
+    According to people on the internet, this was supposedly one of the best burritos in NYC. I wasn't a big fan.
+
+- long: -73.99225811763635
+  lat: 40.7593317811371
+  name: El Gallo Taqueria
+  date: 2024-06-28
+  count: 1
+  order: Lengua Burrito
+  rating: 2
+  description: |
+    Stale rice. Meat was tough. Salsa tasted like canned tomato.
+    I went at 1pm on a friday and the whole restaurant was empty.
+
+- long: -73.98916159284131
+  lat: 40.72506757274651
+  name: El Diablito Taqueria
+  date: 2024-07-10
+  count: 3
+  order: El Diabalito (Spicy Chorizo), Carnitas with guac, Birria with guac
+  rating: 4.5
+  description: |
+    The guy who works there is extremely nice. I told him that my hobby is eating burritos and that I came from 42nd street just to eat there, so he:
+
+    * gave me the rundown on how they make their food
+    * told me I should come back and order carnitas with guac
+    * said he'd give it to me for free
+
+    I showed him my burrito map and then he told me he'd give me one of each burrito on the menu for free (!)
+    Both burritos were very good.
+    They serve it with Habanero salsa, which I really liked. I've tried making it in the past but it never came out good.
+
+- long: -73.99979454618226
+  lat: 40.723476545587104
+  name: Sazon Villa Taqueria
+  date: 2024-07-19
+  count: 1
+  order: Quesarito
+  rating: 4
+  description: |
+    This is a TikTok-famous taco truck in SoHo, well-known for their "quesorito": a burrito covered in fried cheese.
+    The weird thing about this place is that it had one of those McDonalds self-order kiosks. A <i>food truck</i> had that.
+    On top of that, they had a guy outside the food truck dedicated to helping people with the kiosk. Why couldn't he just take the customers' orders?
+
+- long: -73.98627051745997
+  lat: 40.7330686765373
+  name: Happy Burrito
+  date: 2024-07-19
+  count: 1
+  order: Burrito Special (Steak + Chicken)
+  rating: 1
+  description: |
+    If you <a href='https://maps.app.goo.gl/BZx654YDCMCKLD679'>saw this restaurant</a>, everything from their <a href='https://www.nytimes.com/2004/12/12/nyregion/thecity/the-kings-of-sweet-and-sour.html'>Chinese-takeout-style menu</a> to their (presumably) Fuzhounese-speaking staff would immediately tip you off that this place used to be a Chinese restaurant.
+
+    The burrito tasted like feet.
+
+- long: -73.98566022667764
+  lat: 40.768299060800025
+  name: Burrito Box
+  date: 2024-07-30
+  count: 1
+  order: Pulled-Pork/Carnitas Burrito
+  rating: 4
+  description: |
+    Very good burrito. Salsa was also very good.
+
+- long: -73.98313216817068
+  lat: 40.7676742301122
+  name: Fogon Mex-Peruvian
+  date: 2024-07-30
+  count: 1
+  order: Cartinas Burrito
+  rating: 3.5
+  description: |
+    I was on the way to a different burrito restaurant when I accidentally stumbled upon this restaurant - it didn't show up on Google Maps. This was clearly a sign that I should get two burritos in one day.
+    The burrito was shaped like a weasle.
+
+- long: -74.00252175046434
+  lat: 40.733248977906314
+  name: El Jalapeno
+  date: 2024-08-01
+  count: 2
+  order: Beef Tongue Burrito
+  rating: 4.8
+  description: |
+    This burrito is my type. It may not objectively be the best-tasting burrito, but everything about it feels like it was catered specifically to my personal tastes. They fried the outside to make it crispy, but the inside is deliciously creamy. This results in a burrito with a truly unique textural experience.
+    The one problem is that they *refuse* to make the burrito spicy. The first time I went, they didn't put any spice at all. I came back and this time I made sure to explicitly ask for it to be spicy, but it was mild if anything. I fear they assumed I couldn't handle *any* spice because I look and act so white. I can't imagine anyone suffering worse racial injustice in America than I have.
+
+- long: -73.98716117787754
+  lat: 40.7254455434326
+  name: Downtown Burritos
+  date: 2024-08-05
+  count: 1
+  order: Carne Asada Burrito
+  rating: 3
+  description: |
+    It was good.
+
+- long: -73.98769254507613
+  lat: 40.740574694209506
+  name: Summer Salt
+  date: 2024-08-14
+  count: 1
+  order: Pan Seared Adobo Fish Baja Burrito
+  rating: 3
+  description:
+    Whatever sauce they added carried the whole burrito. The sauce was spicy,
+    creamy, and flavorful, but you could tell the underlying burrito wasn't very
+    good.
+
+- long: -73.9179807798515
+  lat: 40.70340213460508
+  name: Taqueria Al Pastor
+  date: 2024-08-16
+  count: 1
+  order: Carne Asada Burrito
+  rating: 4.9
+  description: Beautiful flavor, excellent service.
+
+- long: -73.47455123575442
+  lat: 40.78475642382752
+  name: Curbside Mexican Grill
+  date: 2024-09-01
+  count: 1
+  order: Food Challenge
+  rating: 2
+  description: Not a burrito. They had a food challenge - if you finish a
+    "crunchwrap" and a plate of fries within 30 minutes, the meal is free and
+    you get a T-shirt. I didn't practice eating Mexican food all these years for
+    nothing. I knew my capabilities well - I'm able to eat two fat burritos
+    back-to-back with room to spare.
+
+    I had two friends hyping me up. Their cashier was gassing me up too. He was
+    like "are you hungry? if so, then it'll be easy".
+
+    I knew I could easily conquer this.
+
+    I started with the crunchwrap. It's basically a hybrid between a burrito and
+    a quesadilla. Or at least it should be. It was filled with mac & cheese? and
+    barbeque sauce? Did it even qualify as Mexican food? I ate most of the
+    crunchwrap in a few minutes, but as I kept eating it, it got more and more
+    painful. There was some meat in it, but they were rigid cubes that were
+    tough to chew.
+
+    I finished the crunchwrap in ten minutes, leaving over twenty minutes to eat
+    just a plate of fries. A 14" wide plate of fries. Covered in cheese and
+    bacon. I was already painfully full. All of the fries were stuck together
+    into one cheesy amalgamation, so I had to prod at this pile for a loose
+    piece as if I was playing Jenga. I finally found one, extracted it, and ate
+    it. Not only were these fries covered in cheese and bacon, but apparently
+    also four sticks of butter. These fries were <i>heavy</i>.
+
+    My friends told me if I didn't finish that plate of fries, I'd be a failure
+    for the rest of my life. I forfeited anyway.
+
+- long: -73.96406913703755
+  lat: 40.6827627485099
+  name: B'KLYN BURRO
+  date: 2024-09-05
+  count: 1
+  order: Carne Asada Burrito
+  rating: 3
+  description: It was good. Made my stomach hurt for some reason.
+
+- long: -73.99125147735768
+  lat: 40.75467171166107
+  name: Los Tacos Hermanos
+  date: 2024-09-05
+  count: 1
+  order: Al Pastor Burrito
+  rating: 3
+  description: It was good. The meat was dry probably because I showed up at 9PM
+    when the meat has been sitting around for almost the whole day.
+
+    This burrito had so much salt in it I was afraid I was going to have a heart
+    attack -- and I almost did. At 11PM, I was cruising home with a heart
+    pumping sodium-saturated blood when a grown man suddenly began violently
+    wiggling underneath a car as I passed it. I won't elaborate.
+
+- long: -73.98313816567753
+  lat: 40.72731527098341
+  name: Tacos Cuautla Morelos
+  date: 2024-09-26
+  count: 1
+  order: Carnitas Burrito
+  rating: 3
+  description: Not very flavorful
+
+- long: -71.05439913043593
+  lat: 42.360209517511
+  name: El Paso Enchiladas
+  date: 2024-09-27
+  count: 1
+  order: Shrimp Burrito
+  rating: 1
+  description:
+    We just arrived in Boston and it was the first burrito restaurant I saw. Just like
+    when pokemon trainers make eye contact, I knew I had to make battle with them.
+
+    It was awful. I had to crunch on some uncooked rice grains. The japalenos tasted
+    like they've been sitting in a can for ages. I paid $18 for it, and it was pretty
+    small.
+
+- long: -71.10684483906402
+  lat: 42.33845892214613
+  name: Istanbul Doner Burrito
+  date: 2024-09-28
+  count: 1
+  order: Beef Burrito
+  rating: 4
+  description: Burrito with gyro meat and tzaziki sauce.
+    It's' located in a food court that gave Chuck-e-Cheese energy, so I
+    was initially skeptical. But, once I tried it, it blew me away.
+
+- long: -71.12880682969028
+  lat: 42.352445471588716
+  name: OliToki
+  date: 2024-09-29
+  count: 1
+  order: Kimchi Burrito
+  rating: 3
+  description:
+    Burrito with korean ingredients. Tasting kimchi in a burrit was interesting, but
+    the burrito didn't particularly taste good.
+
+- long: -68.41053167536059
+  lat: 44.53424501739119
+  name: Casa Jalisco
+  date: 2024-09-30
+  count: 2
+  order: Burrito Mexicanos
+  rating: 3.5
+  description: Wet burritos. It was a diner-like restaurant in the middle of nowhere, so I wasn't expecting anything. The food looked weird, but actually tasted surpringly great.
+
+- long: -70.25777648319432
+  lat: 43.65658801980285
+  name: El Rayo Taqueria
+  date: 2024-10-01
+  count: 1
+  order: Yutacan Burrito
+  rating: 3
+  description:
+    Since it was a seaside town, I thought a fish burrito would be best.
+    The top half of the burrito was kinda dry, but the bottom half where
+    all the juices gathered was pretty good.
+
+- long: -74.00250379913204
+  lat: 40.71838205792266
+  name: Dos Toros
+  date: 2024-10-09
+  count: 1
+  order: Al Pastor Burrito
+  rating: 2.5
+  description: I went to a Notion event hosted here, and they had catering from Dos Toros.
+
+- long: -73.98087242561412
+  lat: 40.730031835107205
+  name: Zarazoga
+  date: 2024-10-16
+  count: 1
+  order: Goat Burrito
+  rating: 3.8
+  description: The burrito has the colors of the mexican flag. It's very cute.
+
+- long: -73.98848494769992
+  lat: 40.72179237186905
+  name: Sol De North
+  date: 2024-10-22
+  count: 1
+  order: Carne Asada Burrito
+  rating: 2
+  description:
+    The burrito *should* have been good. It felt like the underlying burrito was pretty good,
+    but for some reason the burrito was filled with this burned-tasted liquid. I suspect that they
+    use liquid smoke in order to make their meat taste as if it was smoked. If so, they put way too much.
+    It's also pretty small for the price.
+
+- long: -73.36030345486907
+  lat: 40.75494473831886
+  name: Cocina Porky
+  date: 2024-10-16
+  count: 1
+  order: Burria Burrito
+  rating: 4
+  description: My 100th burrito!
+
+- long: -73.9063765450074
+  lat: 40.689418786745264
+  name: Ilegal Taqueria
+  date: 2024-10-25
+  count: 1
+  order: Nopales y Queso Burrito
+  rating: 4
+  description: My first nopal burrito. It tastes like string beans.
+
+- long: -74.00730129760417
+  lat: 40.75171020088475
+  name: Forsyth Fire Escape
+  date: 2024-10-29
+  count: 1
+  order: Scallion Pancake Burrito
+  rating: 2
+  description: This restaurant used to be based in someone's apartment. They would put your food in a bucket and lower it down from their window using a rope. Currently, they have a small storefront in a food market. It's very... artisinal. It used a lot of bougie materials like "lemongrass" but it couldn't quite beat a normal taqueria burrito. It's too oily too.
+
+- long: -73.97633543092921
+  lat: 40.68189730801235
+  name: Cruz del Sur
+  date: 2024-11-04
+  count: 1
+  order: Lengua Burrito
+  rating: 2.5
+  description: It was ok. Across the street from the restaurant, there was an ad the size of a building of a woman in her underwear. It was all you could see out the window. Weird.
+
+- long: -74.00098236141415
+  lat: 40.72964071910958
+  name: Kati Roll Company
+  date: 2024-11-12
+  count: 1
+  order: Shami Kabab Roll
+  rating: 2.5
+  description: Maybe not exactly a burrito but I really wanted to try it. I paid $9 for a very tiny roll filled with ground meat. This is by the NYU campus so they probably usually serve rich kids but I still couldn't help feeling ripped off. It tasted good though, would be even better if they put rice or vegetables in it too.
+
+- long: -73.99125787053732
+  lat: 40.727899760030915
+  name: El Grillito Food Truck
+  date: 2024-11-12
+  count: 1
+  order: Carnitas Burrito
+  rating: 2.5
+  description: There's no chance they're legally allowed to park their giant food truck in that spot. The burrito was mid.
+
+- long: -73.9880098516124
+  lat: 40.72843472292062
+  name: Taqueria Diana
+  date: 2024-11-21
+  count: 1
+  order: Carne Asada Burrito
+  rating: 2
+  description: It was shit.
+
+- long: -73.99530571587455
+  lat: 40.721062991972346
+  name: Some Taco Truck
+  date: 2024-12-06
+  count: 1
+  order: Al Pastor Burrito
+  rating: 3
+  description: It was somewhere around here. No idea what it is because it's not on google maps... They put a whole chunk of pineapple in my burrito.
+
+- long: -81.2544369563486
+  lat: 32.133206156762995
+  name: Taqueria Los Compas
+  date: 2024-12-28
+  count: 1
+  order: Chicken Burrito
+  rating: 3
+  description: It was yummy. They put a slice of lime in the water, and because I thought it was really good, I started putting a slice in every cup of water I drink.
+
+- long: -73.3221833931627
+  lat: 40.69854761780572
+  name: Swell Taco
+  date: 2024-12-18
+  count: 1
+  order: Big Daddy Burrito
+  rating: 3
+  description: It was yummy. Had potato chunks in it.
+
+- long: -73.98548670948519
+  lat: 40.72783980065237
+  name: Electric Burrito
+  date: 2024-01-23
+  count: 1
+  order: Johny Utah Burrito
+  rating: 3.5
+  description: Too much rice.
