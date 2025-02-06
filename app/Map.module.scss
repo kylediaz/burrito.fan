@@ -1,0 +1,13 @@
+$mobile-breakpoint: 639px;
+$header-height: 60px;
+
+.mapStyle {
+    height: calc(100% - 20px);
+    margin: 10px;
+    border-radius: 3px;
+    position: relative;
+
+    @media only screen and (max-width: $mobile-breakpoint) {
+        height: calc(40vh - 110px);
+    }
+}

@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Burrito Map",
+  title: "burrito.fan",
   description: "Reviews of every burrito I've ever eaten",
 };
 
