@@ -10,10 +10,6 @@ import { BurritoReviewModel, FocusedEntry } from "./types";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
-function clamp(num: number, min: number, max: number): number {
-  return num <= min ? min : num >= max ? max : num;
-}
-
 function onMobile(): boolean {
   return window.innerWidth < 900;
 }
@@ -26,8 +22,17 @@ class Map extends Component {
     const { burritos, setFocusedEntry } = this.props as Props;
 
     this.markers = burritos.map((burrito: BurritoReviewModel) => {
+      let size = 48;
+      const el = document.createElement("div");
+      el.className = styles.marker;
+      if (burrito.rating > 4) {
+        el.className += " " + styles.favorite;
+        size = 96;
+      }
+      el.style.width = el.style.height = `${size}px`;
       return new mapboxgl.Marker({
-        rotationAlignment: "horizon",
+        element: el,
+        offset: [0, -size / 2],
         clickTolerance: 1,
       }).setLngLat([burrito.long, burrito.lat]);
     });
