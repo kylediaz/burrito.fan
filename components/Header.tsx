@@ -4,10 +4,7 @@ import Image from "next/image";
 
 import styles from "./Header.module.scss";
 import { BurritoReviewModel } from "@/app/types";
-
-function numberWithCommas(x: number): string {
-  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+import BigNumber from "./BigNumber";
 
 export interface Props {
   burritos: BurritoReviewModel[];
@@ -15,6 +12,8 @@ export interface Props {
 
 function Header(props: Props) {
   const { burritos } = props;
+
+  const restaurantsVisited = burritos.length;
 
   const totalBurritosEaten = burritos
     .map((burrito) => burrito.count ?? 0)
@@ -24,27 +23,21 @@ function Header(props: Props) {
 
   return (
     <div className={styles.container}>
-      <div className="relative">
-        <Image
-          src="/burrito.webp"
-          width={1080}
-          height={500}
-          alt="Image of burrito"
-        />
-        <div className="absolute bottom-0 w-full text-center">
-          <h1 className={styles.title}>I fucking love burritos</h1>
-        </div>
+      <div className="text-center">
+        <h1 className="text-8xl">Kyle&apos;s Burrito Map</h1>
       </div>
-      <div className="flex w-full justify-center text-center">
+      <div className="flex w-full justify-center text-center flex-wrap p-8">
         <div className="w-1/2">
-          <div className={styles.bigNumber}>{totalBurritosEaten}</div>
-          <div>Burritos Eaten</div>
+          <BigNumber num={totalBurritosEaten} subtitle="Burritos Eaten" />
         </div>
         <div className="w-1/2">
-          <div className={styles.bigNumber}>
-            {numberWithCommas(totalCaloriesEaten)}
-          </div>
-          <div>Calories Consumed</div>
+          <BigNumber num={totalCaloriesEaten} subtitle="Calories Consumed" />
+        </div>
+        <div className="w-1/2">
+          <BigNumber num={restaurantsVisited} subtitle="Restaurants Visited" />
+        </div>
+        <div className="w-1/2">
+          <BigNumber num={0} subtitle="Regrets" />
         </div>
       </div>
       <div>
@@ -61,6 +54,7 @@ function Header(props: Props) {
         placerat dolor eu facilisis. Integer et lacus arcu. Donec quam orci,
         tincidunt id libero et, pretium pellentesque urna. Quisque quis
         vestibulum lectus. Vivamus volutpat dapibus ornare.
+        <p>Ratings are based on flavor alone.</p>
       </div>
     </div>
   );
