@@ -2,7 +2,7 @@ $mobile-breakpoint: 639px;
 $header-height: 60px;
 
 header.header {
-    height: $header-height - 10px;
+    height: $header-height;
     font-size: 40px;
     padding: 5px 10px;
 }
