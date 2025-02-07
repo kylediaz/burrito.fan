@@ -1,7 +1,5 @@
 import React from "react";
 
-import Image from "next/image";
-
 import styles from "./Header.module.scss";
 import { BurritoReviewModel } from "@/app/types";
 import BigNumber from "./BigNumber";
@@ -21,12 +19,16 @@ function Header(props: Props) {
 
   const totalCaloriesEaten = totalBurritosEaten * 1200;
 
+  const regrets: number = burritos
+    .map((burrito) => (burrito.rating < 1.5 ? 1 : (0 as number)))
+    .reduce((a, b) => a + b, 0);
+
   return (
     <div className={styles.container}>
-      <div className="text-center">
-        <h1 className="text-8xl">Kyle&apos;s Burrito Map</h1>
+      <div className="text-center py-12">
+        <h1 className="sm:text-8xl text-6xl">Kyle&apos;s Burrito Map</h1>
       </div>
-      <div className="flex w-full justify-center text-center flex-wrap p-8">
+      <div className="flex w-full justify-center text-center flex-wrap gap-y-8 p-8">
         <div className="w-1/2">
           <BigNumber num={totalBurritosEaten} subtitle="Burritos Eaten" />
         </div>
@@ -37,7 +39,7 @@ function Header(props: Props) {
           <BigNumber num={restaurantsVisited} subtitle="Restaurants Visited" />
         </div>
         <div className="w-1/2">
-          <BigNumber num={0} subtitle="Regrets" />
+          <BigNumber num={regrets} subtitle="Regrets" />
         </div>
       </div>
       <div>
