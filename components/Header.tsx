@@ -25,10 +25,10 @@ function Header(props: Props) {
 
   return (
     <div className={styles.container}>
-      <div className="text-center py-12">
+      <div className="text-center my-12">
         <h1 className="sm:text-8xl text-6xl">Kyle&apos;s Burrito Map</h1>
       </div>
-      <div className="flex w-full justify-center text-center flex-wrap gap-y-8 p-8">
+      <div className="flex w-full justify-center text-center flex-wrap gap-y-8 px-8 my-12">
         <div className="w-1/2">
           <BigNumber num={totalBurritosEaten} subtitle="Burritos Eaten" />
         </div>
@@ -42,20 +42,8 @@ function Header(props: Props) {
           <BigNumber num={regrets} subtitle="Regrets" />
         </div>
       </div>
-      <div>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-        fermentum sodales lobortis. Sed feugiat, mi nec mollis sagittis, nisi
-        lacus tempor ex, vitae condimentum justo risus quis lacus. Morbi
-        lobortis leo malesuada, semper arcu in, accumsan dolor. Class aptent
-        taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-        himenaeos. Integer laoreet condimentum nunc et pharetra. Proin quis est
-        nec odio posuere tincidunt a tincidunt risus. Etiam in metus mollis,
-        scelerisque leo sit amet, scelerisque ipsum. Fusce eu fermentum nisl.
-        Proin et felis ante. Curabitur molestie arcu vehicula ullamcorper
-        porttitor. In ac vehicula mi, vitae lacinia libero. Cras dapibus
-        placerat dolor eu facilisis. Integer et lacus arcu. Donec quam orci,
-        tincidunt id libero et, pretium pellentesque urna. Quisque quis
-        vestibulum lectus. Vivamus volutpat dapibus ornare.
+      <div className="pr-4">
+        <p>Hey! I&apos;m Kyle, and my hobby is eating burritos</p>
         <p>Ratings are based on flavor alone.</p>
       </div>
     </div>

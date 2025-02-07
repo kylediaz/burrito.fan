@@ -1,11 +1,13 @@
 .container {
+    transition: background-color 0.3s ease;
+
+    &.focused .restaurantName {
+        text-decoration: underline;
+    }
+
     .restaurantName {
         font-size: 29px;
         line-height: 33px;
     }
     margin-bottom: 4em;
-}
-
-.container.focused {
-    background-color: red;
 }
