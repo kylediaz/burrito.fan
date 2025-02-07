@@ -6,7 +6,7 @@ import styles from "./Page.module.scss";
 import burritosRaw from "./burritos.json";
 import BurritoReviews from "./BurritoReviews";
 import Map from "./Map";
-import { BurritoReviewModel } from "./types";
+import { BurritoReviewModel, FocusedEntry } from "./types";
 
 const burritos: BurritoReviewModel[] = burritosRaw
   .map((raw) => raw as BurritoReviewModel)
@@ -21,7 +21,10 @@ const burritos: BurritoReviewModel[] = burritosRaw
   });
 
 export default function Home() {
-  const [focusedEntry, setFocusedEntry] = useState({ idx: -1, source: "none" });
+  const [focusedEntry, setFocusedEntry] = useState({
+    idx: -1,
+    source: "none",
+  } as FocusedEntry);
 
   return (
     <div>

@@ -14,7 +14,13 @@ function onMobile(): boolean {
   return window.innerWidth < 900;
 }
 
-class Map extends Component {
+interface Props {
+  burritos: BurritoReviewModel[];
+  focusedEntry: FocusedEntry;
+  setFocusedEntry: Dispatch<SetStateAction<FocusedEntry>>;
+}
+
+class Map extends Component<Props> {
   markers: Marker[] = [];
   map: mapboxgl.Map | null = null;
 
@@ -27,7 +33,7 @@ class Map extends Component {
       el.className = styles.marker;
       if (burrito.rating > 4) {
         el.className += " " + styles.favorite;
-        size = 96;
+        size = Math.floor(size * 1.5);
       }
       el.style.width = el.style.height = `${size}px`;
       return new mapboxgl.Marker({
@@ -113,12 +119,6 @@ class Map extends Component {
     }
     return closestMarkerIndex;
   }
-}
-
-export interface Props {
-  burritos: BurritoReviewModel[];
-  focusedEntry: FocusedEntry;
-  setFocusedEntry: Dispatch<SetStateAction<FocusedEntry>>;
 }
 
 export default Map;
