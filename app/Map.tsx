@@ -6,7 +6,7 @@ import mapboxgl, { Marker, LngLat } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import styles from "./Map.module.scss";
-import { BurritoReviewModel } from "./types";
+import { BurritoReviewModel, FocusedEntry } from "./types";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
@@ -40,6 +40,8 @@ class Map extends Component {
       minZoom: 2,
     });
 
+    this.map.addControl(new mapboxgl.FullscreenControl());
+
     this.markers
       // Sort so further markers are rendered behind nearer markers
       .toSorted(
@@ -57,20 +59,21 @@ class Map extends Component {
       const closestMarkerIndex = this.findClosestMarker(clickPos);
 
       if (closestMarkerIndex != null) {
-        setFocusedEntry(closestMarkerIndex);
+        setFocusedEntry({ idx: closestMarkerIndex, source: "map" });
       }
     });
   }
 
   componentDidUpdate(prevProps: Props) {
-    if (this.props.focusedEntry !== prevProps.focusedEntry) {
-      this.focusOnNewMarker(this.props.focusedEntry);
+    const props = this.props as Props;
+    if (props.focusedEntry.idx !== prevProps.focusedEntry.idx) {
+      this.focusOnNewMarker(props.focusedEntry.idx);
     }
   }
 
   render() {
     return (
-      <section className={styles.mapContainer}>
+      <section className={styles.mapContainer + " m-2"}>
         <div className={`${styles.mapStyle} mapboxgl-map`} id="map" />
       </section>
     );
@@ -109,8 +112,8 @@ class Map extends Component {
 
 export interface Props {
   burritos: BurritoReviewModel[];
-  focusedEntry: number;
-  setFocusedEntry: Dispatch<SetStateAction<number>>;
+  focusedEntry: FocusedEntry;
+  setFocusedEntry: Dispatch<SetStateAction<FocusedEntry>>;
 }
 
 export default Map;
