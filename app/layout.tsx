@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "burrito.fan",
-  description: "Reviews of every burrito I've ever eaten",
+  title: "Burrito Map",
+  description: "A Map of Every Burrito I've Ever Eaten",
 };
 
 export default function RootLayout({
