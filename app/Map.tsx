@@ -4,6 +4,7 @@ import React, { Component } from "react";
 
 import mapboxgl, { Marker, LngLat } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
+import { Position } from "geojson";
 
 import styles from "./Map.module.scss";
 import { BurritoReviewModel } from "./types";
@@ -14,6 +15,7 @@ mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
 interface Props {
   burritos: BurritoReviewModel[];
+  drawing: Position[][]; // List of polygons to draw on the globe
 }
 
 class Map extends Component<Props> {
@@ -28,19 +30,20 @@ class Map extends Component<Props> {
   }
 
   componentDidMount() {
-    const { burritos } = this.props as Props;
+    const { burritos, drawing } = this.props as Props;
 
     this.markers = burritos.map((burrito: BurritoReviewModel) =>
       createMarker({ burrito }),
     );
 
-    this.map = new mapboxgl.Map({
+    const map = new mapboxgl.Map({
       container: "map",
       style: process.env.NEXT_PUBLIC_MAPBOX_STYLE,
       center: [-99.7129, 40.0902],
       zoom: onMobile() ? 2 : 3,
       minZoom: 2,
     });
+    this.map = map;
 
     this.markers
       // Sort so further markers are rendered behind nearer markers
@@ -54,12 +57,52 @@ class Map extends Component<Props> {
         }
       });
 
-    this.map.on("click", (e) => {
+    map.on("click", (e) => {
       const clickPos = e.lngLat;
       const closestMarkerIndex = this.findClosestMarker(clickPos);
 
       if (closestMarkerIndex != null) {
         this.setState({ focusedEntry: closestMarkerIndex });
+      }
+    });
+
+    map.on("load", () => {
+      for (let i = 0; i < drawing.length; i++) {
+        const id = `polygon-${i}`;
+        const polygon = drawing[i];
+        map.addSource(id, {
+          type: "geojson",
+          data: {
+            type: "Feature",
+            geometry: {
+              type: "Polygon",
+              coordinates: [polygon] as Position[][],
+            },
+            properties: {},
+          },
+        });
+
+        map.addLayer({
+          id: id,
+          type: "fill",
+          source: id,
+          layout: {},
+          paint: {
+            "fill-color": "#0080ff",
+            "fill-opacity": 1,
+          },
+        });
+
+        map.addLayer({
+          id: `${id}-outline`,
+          type: "line",
+          source: id,
+          layout: {},
+          paint: {
+            "line-color": "#000",
+            "line-width": 3,
+          },
+        });
       }
     });
   }
