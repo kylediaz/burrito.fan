@@ -1,35 +1,10 @@
 $mobile-breakpoint: 639px;
-$header-height: 60px;
 
 .mapContainer {
-    flex: 1;
-    @media only screen and (max-width: $mobile-breakpoint) {
-        display: block;
-        border-right: none;
-        flex: 100%;
-    }
+    width: 100vw;
+    height: 100vh;
 }
 
 .mapStyle {
     height: calc(100%);
-    position: relative;
-
-    @media only screen and (max-width: $mobile-breakpoint) {
-        height: calc(40vh - 110px);
-    }
-}
-
-.marker {
-    background-image: url("/pin.svg");
-    background-size: cover;
-    cursor: pointer;
-    width: 48px;
-    height: 48px;
-    &:hover {
-        transform: scale(1.8);
-    }
-    &.favorite {
-        filter: brightness(0) saturate(100%) invert(60%) sepia(39%)
-            saturate(822%) hue-rotate(320deg) brightness(74%) contrast(97%);
-    }
 }

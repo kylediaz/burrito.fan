@@ -8,13 +8,3 @@ export type BurritoReviewModel = {
   rating: number;
   description: string | undefined;
 };
-
-export type FocusedEntry = {
-  idx: number;
-  source: "map" | "scroll" | "click" | "none";
-};
-
-export const DefaultFocusedEntry = {
-  idx: -1,
-  source: "none",
-};

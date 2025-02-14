@@ -1,0 +1,49 @@
+$wiggle-range: 10deg;
+
+.markerContainer {
+    --marker-size: 48px;
+    .marker {
+        background-image: url("/pin.svg");
+        background-size: cover;
+        cursor: pointer;
+        width: var(--marker-size);
+        height: var(--marker-size);
+        &:hover {
+            animation:
+                wiggle-start 1s ease-in-out 1,
+                wiggle 1s ease-in-out infinite;
+            transform-origin: center bottom;
+        }
+        &:not(:hover) {
+            animation: wiggle-end 0.3s ease-in-out;
+        }
+
+        &.favorite {
+            filter: brightness(0) saturate(100%) invert(60%) sepia(39%)
+                saturate(822%) hue-rotate(320deg) brightness(74%) contrast(97%);
+        }
+    }
+
+    @keyframes wiggle-start {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(-10deg);
+        }
+    }
+    @keyframes wiggle {
+        0%,
+        100% {
+            transform: rotate(-10deg);
+        }
+        50% {
+            transform: rotate(10deg);
+        }
+    }
+    @keyframes wiggle-end {
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+}

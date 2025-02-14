@@ -1,47 +1,38 @@
 "use client";
 
-import React, { SetStateAction, Dispatch, Component } from "react";
+import React, { Component } from "react";
 
 import mapboxgl, { Marker, LngLat } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
 import styles from "./Map.module.scss";
-import { BurritoReviewModel, FocusedEntry } from "./types";
+import { BurritoReviewModel } from "./types";
+import { createMarker } from "../components/Marker";
+import { onMobile } from "./util";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
-function onMobile(): boolean {
-  return window.innerWidth < 900;
-}
-
 interface Props {
   burritos: BurritoReviewModel[];
-  focusedEntry: FocusedEntry;
-  setFocusedEntry: Dispatch<SetStateAction<FocusedEntry>>;
 }
 
 class Map extends Component<Props> {
   markers: Marker[] = [];
   map: mapboxgl.Map | null = null;
 
-  componentDidMount() {
-    const { burritos, setFocusedEntry } = this.props as Props;
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      focusedEntry: -1,
+    };
+  }
 
-    this.markers = burritos.map((burrito: BurritoReviewModel) => {
-      let size = 48;
-      const el = document.createElement("div");
-      el.className = styles.marker;
-      if (burrito.rating > 4) {
-        el.className += " " + styles.favorite;
-        size = Math.floor(size * 1.5);
-      }
-      el.style.width = el.style.height = `${size}px`;
-      return new mapboxgl.Marker({
-        element: el,
-        offset: [0, -size / 2],
-        clickTolerance: 1,
-      }).setLngLat([burrito.long, burrito.lat]);
-    });
+  componentDidMount() {
+    const { burritos } = this.props as Props;
+
+    this.markers = burritos.map((burrito: BurritoReviewModel) =>
+      createMarker({ burrito }),
+    );
 
     this.map = new mapboxgl.Map({
       container: "map",
@@ -50,8 +41,6 @@ class Map extends Component<Props> {
       zoom: onMobile() ? 2 : 3,
       minZoom: 2,
     });
-
-    this.map.addControl(new mapboxgl.FullscreenControl());
 
     this.markers
       // Sort so further markers are rendered behind nearer markers
@@ -70,23 +59,16 @@ class Map extends Component<Props> {
       const closestMarkerIndex = this.findClosestMarker(clickPos);
 
       if (closestMarkerIndex != null) {
-        setFocusedEntry({ idx: closestMarkerIndex, source: "map" });
+        this.setState({ focusedEntry: closestMarkerIndex });
       }
     });
   }
 
-  componentDidUpdate(prevProps: Props) {
-    const props = this.props as Props;
-    if (props.focusedEntry.idx !== prevProps.focusedEntry.idx) {
-      this.focusOnNewMarker(props.focusedEntry.idx);
-    }
-  }
-
   render() {
     return (
-      <section className={styles.mapContainer + " m-2"}>
+      <div className={styles.mapContainer}>
         <div className={`${styles.mapStyle} mapboxgl-map`} id="map" />
-      </section>
+      </div>
     );
   }
 
@@ -100,11 +82,18 @@ class Map extends Component<Props> {
     const distanceToTarget = this.map
       .getCenter()
       .distanceTo(marker.getLngLat());
-    this.map.flyTo({
+
+    const target = {
       center: marker.getLngLat(),
       zoom: Math.max(13.5, this.map.getZoom()),
       duration: Math.min(1000 + distanceToTarget / 100, 7_000),
-    });
+    };
+
+    if (distanceToTarget > 10_000) {
+      this.map.flyTo(target);
+    } else {
+      this.map.easeTo(target);
+    }
   }
 
   findClosestMarker(clickPos: LngLat): number | null {
