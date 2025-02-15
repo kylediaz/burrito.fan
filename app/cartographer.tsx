@@ -7,16 +7,42 @@ import { Position } from "geojson";
 
 import opentype, { Path } from "opentype.js";
 
-const font = opentype.loadSync("./private/Geist.ttf");
+const font = opentype.loadSync("./private/SpaceMono-Regular.ttf");
 
 export function textToPolygon(
   text: string,
-  center: Position,
+  pos: Position,
   height: number,
 ): Position[][] {
-  const path = font.getPath(text, center[0], center[1], height);
+  const path = font.getPath(text, pos[0], pos[1], height);
   const polygons = pathToPolygon(path);
   reflectYAxis(polygons);
+  return polygons;
+}
+
+/*
+Better function designed to work with monospaced fonts.
+Returns an array of polygons, one for each character.
+*/
+export function textToPolygonMono(
+  text: string,
+  pos: Position,
+  height: number,
+  dx: number, // Depends on the font
+): Position[][][] {
+  const polygons = [];
+  let x = pos[0];
+  for (const c of text) {
+    if (c !== " ") {
+      const path = font.getPath(c, x, pos[1], height);
+      const polygon = pathToPolygon(path);
+      polygons.push(polygon);
+    }
+    x += dx;
+  }
+  for (const polygon of polygons) {
+    reflectYAxis(polygon);
+  }
   return polygons;
 }
 

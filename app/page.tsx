@@ -1,7 +1,7 @@
 import burritosRaw from "./burritos.json";
 import Map from "./Map";
 import { BurritoReviewModel } from "./types";
-import { textToPolygon } from "./cartographer";
+import { textToPolygonMono } from "./cartographer";
 
 const burritos: BurritoReviewModel[] = burritosRaw
   .map((raw) => raw as BurritoReviewModel)
@@ -20,10 +20,11 @@ const totalBurritosEaten = burritos.reduce(
   0,
 );
 
-const test = textToPolygon(
+const test = textToPolygonMono(
   `${totalBurritosEaten} burritos eaten`,
-  [-120.7129, 52.0902],
-  5,
+  [-117.7129, 51.5902],
+  3.5,
+  1.9,
 );
 
 export default function Home() {

@@ -15,7 +15,7 @@ mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
 interface Props {
   burritos: BurritoReviewModel[];
-  drawing: Position[][]; // List of polygons to draw on the globe
+  drawing: Position[][][]; // List of polygons to draw on the globe
 }
 
 class Map extends Component<Props> {
@@ -76,7 +76,7 @@ class Map extends Component<Props> {
             type: "Feature",
             geometry: {
               type: "Polygon",
-              coordinates: [polygon] as Position[][],
+              coordinates: polygon,
             },
             properties: {},
           },
@@ -88,19 +88,8 @@ class Map extends Component<Props> {
           source: id,
           layout: {},
           paint: {
-            "fill-color": "#0080ff",
+            "fill-color": "#000",
             "fill-opacity": 1,
-          },
-        });
-
-        map.addLayer({
-          id: `${id}-outline`,
-          type: "line",
-          source: id,
-          layout: {},
-          paint: {
-            "line-color": "#000",
-            "line-width": 3,
           },
         });
       }
