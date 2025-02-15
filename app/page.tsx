@@ -18,6 +18,12 @@ const burritos: BurritoReviewModel[] = burritosRaw
     }
   });
 
+/*
+Constructing the polygons for the text written on the map
+must be done in here. This should all be computed during
+build time, not on the client in the Map module.
+*/
+
 const polygons: Position[][][] = [];
 const fontHeightToWidthRatio = 3.5 / 1.9;
 
@@ -62,6 +68,26 @@ polygons.push(
     6,
     fontHeightToWidthRatio,
     1,
+  ),
+);
+
+const gramsPerGrain = 0.04;
+const gramsOfRicePerCup = 200;
+const grainsPerCupOfRice = gramsOfRicePerCup / gramsPerGrain;
+const cupsOfRicePerBurrito = 0.25;
+const grainsOfRicePerBurrito = cupsOfRicePerBurrito * grainsPerCupOfRice;
+const metersPerGrain = 0.0075;
+const metersOfRicePerBurrito = metersPerGrain * grainsOfRicePerBurrito;
+const totalRiceLength = Math.ceil(metersOfRicePerBurrito * totalBurritosEaten);
+polygons.push(
+  ...bigOverSmallText(
+    `${totalRiceLength}`,
+    `meters of rice devoured`.toUpperCase(),
+    [122.68790067829698, -29],
+    10,
+    2,
+    fontHeightToWidthRatio,
+    0.5,
   ),
 );
 
