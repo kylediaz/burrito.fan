@@ -8,10 +8,9 @@ $wiggle-range: 10deg;
         cursor: pointer;
         width: var(--marker-size);
         height: var(--marker-size);
+        transition: transform 1s;
         &:hover {
-            animation:
-                wiggle-start 1s ease-in-out 1,
-                wiggle 1s ease-in-out infinite;
+            animation: wiggle 1s ease-in-out;
             transform-origin: center bottom;
         }
         &:not(:hover) {
@@ -24,24 +23,23 @@ $wiggle-range: 10deg;
         }
     }
 
-    @keyframes wiggle-start {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
-            transform: rotate(-10deg);
-        }
-    }
     @keyframes wiggle {
-        0%,
-        100% {
-            transform: rotate(-10deg);
+        20% {
+            transform: rotate(7deg);
         }
-        50% {
-            transform: rotate(10deg);
+
+        40% {
+            transform: rotate(-14deg);
         }
-    }
-    @keyframes wiggle-end {
+
+        60% {
+            transform: rotate(4deg);
+        }
+
+        80% {
+            transform: rotate(-2deg);
+        }
+
         100% {
             transform: rotate(0deg);
         }
