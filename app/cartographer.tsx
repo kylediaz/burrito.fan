@@ -18,20 +18,18 @@ export function bigOverSmallText(
   fontHeightToWidthRatio: number,
   spacing: number = 0,
 ): Position[][][] {
-  const bigPos = [pos[0], pos[1] + smallSize + spacing];
+  const bigTextCharWidth = bigSize / fontHeightToWidthRatio;
+  const bigTextLength = bigText.length * bigTextCharWidth;
+  const smallTextCharWidth = smallSize / fontHeightToWidthRatio;
+  const smallTextLength = smallText.length * smallTextCharWidth;
+  const differenceInLength = bigTextLength - smallTextLength;
+  const bigPos = [
+    pos[0] - differenceInLength / 2,
+    pos[1] + smallSize + spacing,
+  ];
   return [
-    ...textToPolygonMono(
-      bigText,
-      bigPos,
-      bigSize,
-      bigSize / fontHeightToWidthRatio,
-    ),
-    ...textToPolygonMono(
-      smallText,
-      pos,
-      smallSize,
-      smallSize / fontHeightToWidthRatio,
-    ),
+    ...textToPolygonMono(bigText, bigPos, bigSize, bigTextCharWidth),
+    ...textToPolygonMono(smallText, pos, smallSize, smallTextCharWidth),
   ];
 }
 
