@@ -4,7 +4,8 @@ import burritosRaw from "./burritos.json";
 import Map from "./Map";
 import { BurritoReviewModel } from "./types";
 import { bigOverSmallText } from "./cartographer";
-import { formatNumberWithCommas } from "./util";
+import { formatNumberWithCommas, metersOfRicePerBurrito } from "./util";
+import Preloader from "@/components/Preloader";
 
 const burritos: BurritoReviewModel[] = burritosRaw
   .map((raw) => raw as BurritoReviewModel)
@@ -71,13 +72,6 @@ polygons.push(
   ),
 );
 
-const gramsPerGrain = 0.04;
-const gramsOfRicePerCup = 200;
-const grainsPerCupOfRice = gramsOfRicePerCup / gramsPerGrain;
-const cupsOfRicePerBurrito = 0.25;
-const grainsOfRicePerBurrito = cupsOfRicePerBurrito * grainsPerCupOfRice;
-const metersPerGrain = 0.0075;
-const metersOfRicePerBurrito = metersPerGrain * grainsOfRicePerBurrito;
 const totalRiceLength = Math.ceil(metersOfRicePerBurrito * totalBurritosEaten);
 polygons.push(
   ...bigOverSmallText(
@@ -92,5 +86,10 @@ polygons.push(
 );
 
 export default function Home() {
-  return <Map burritos={burritos} drawing={polygons} />;
+  return (
+    <>
+      <Preloader />
+      <Map burritos={burritos} drawing={polygons} />
+    </>
+  );
 }
