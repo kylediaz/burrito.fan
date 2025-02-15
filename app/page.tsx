@@ -3,7 +3,7 @@ import { Position } from "geojson";
 import burritosRaw from "./burritos.json";
 import Map from "./Map";
 import { BurritoReviewModel } from "./types";
-import { textToPolygonMono } from "./cartographer";
+import { bigOverSmallText } from "./cartographer";
 import { formatNumberWithCommas } from "./util";
 
 const burritos: BurritoReviewModel[] = burritosRaw
@@ -25,24 +25,43 @@ const totalBurritosEaten = burritos.reduce(
   (acc, burrito) => acc + (burrito.count ?? 0),
   0,
 );
-
 polygons.push(
-  ...textToPolygonMono(
-    `${totalBurritosEaten} burritos eaten`.toUpperCase(),
-    [-117.7129, 52.1902],
+  ...bigOverSmallText(
+    `${totalBurritosEaten}`,
+    `burritos eaten`.toUpperCase(),
+    [-112.7129, 34.1902],
+    10,
     3.5,
-    3.5 / fontHeightToWidthRatio,
+    fontHeightToWidthRatio,
   ),
 );
 
 const caloriesConsumed = formatNumberWithCommas(totalBurritosEaten * 1250);
-
 polygons.push(
-  ...textToPolygonMono(
-    `${caloriesConsumed} calories consumed`.toUpperCase(),
-    [55.7129, 60.1902],
-    4.5,
-    4.5 / fontHeightToWidthRatio,
+  ...bigOverSmallText(
+    `${caloriesConsumed}`,
+    `calories consumed`.toUpperCase(),
+    [57.7129, 30.1902],
+    14.5,
+    6,
+    fontHeightToWidthRatio,
+    1,
+  ),
+);
+
+const regrets = burritos.reduce(
+  (acc, burrito) => acc + (burrito.rating < 1.5 ? 1 : 0),
+  0,
+);
+polygons.push(
+  ...bigOverSmallText(
+    `${regrets}`,
+    `regrets`.toUpperCase(),
+    [14.9618936490113251, -10],
+    35,
+    6,
+    fontHeightToWidthRatio,
+    1,
   ),
 );
 

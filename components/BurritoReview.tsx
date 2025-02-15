@@ -20,9 +20,9 @@ function BurritoReview(props: Props) {
             <time>{burrito.date}</time>
           </div>
           <div>
-            {(burrito.count ?? 0) <= 1
+            {burrito.count == 1
               ? "1 burrito eaten here"
-              : burrito.count + " burritos eaten here"}
+              : (burrito.count ?? 0) + " burritos eaten here"}
           </div>
           {burrito.order ? (
             <div>

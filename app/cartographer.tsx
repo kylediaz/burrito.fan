@@ -9,6 +9,32 @@ import opentype, { Path } from "opentype.js";
 
 const font = opentype.loadSync("./public/SpaceMono-Regular.ttf");
 
+export function bigOverSmallText(
+  bigText: string,
+  smallText: string,
+  pos: Position,
+  bigSize: number,
+  smallSize: number,
+  fontHeightToWidthRatio: number,
+  spacing: number = 0,
+): Position[][][] {
+  const bigPos = [pos[0], pos[1] + smallSize + spacing];
+  return [
+    ...textToPolygonMono(
+      bigText,
+      bigPos,
+      bigSize,
+      bigSize / fontHeightToWidthRatio,
+    ),
+    ...textToPolygonMono(
+      smallText,
+      pos,
+      smallSize,
+      smallSize / fontHeightToWidthRatio,
+    ),
+  ];
+}
+
 export function textToPolygon(
   text: string,
   pos: Position,
@@ -16,7 +42,7 @@ export function textToPolygon(
 ): Position[][] {
   const path = font.getPath(text, pos[0], pos[1], height);
   const polygons = pathToPolygon(path);
-  reflectYAxis(polygons);
+  reflectYAxis(polygons, pos[1]);
   return polygons;
 }
 
@@ -41,7 +67,7 @@ export function textToPolygonMono(
     x += dx;
   }
   for (const polygon of polygons) {
-    reflectYAxis(polygon);
+    reflectYAxis(polygon, pos[1]);
   }
   return polygons;
 }
@@ -105,10 +131,10 @@ function sampleQuadraticBezierCurve(
   return output;
 }
 
-function reflectYAxis(polygons: Position[][]) {
+function reflectYAxis(polygons: Position[][], y: number) {
   for (const polygon of polygons) {
     for (let i = 0; i < polygon.length; i++) {
-      polygon[i][1] = -polygon[i][1] + 90;
+      polygon[i][1] = y + -(polygon[i][1] - y);
     }
   }
 }

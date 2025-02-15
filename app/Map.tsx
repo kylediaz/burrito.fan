@@ -97,7 +97,7 @@ class Map extends Component<Props> {
           source: id,
           layout: {},
           paint: {
-            "fill-color": "#000",
+            "fill-color": "#141C18",
             "fill-opacity": 1,
           },
         });
