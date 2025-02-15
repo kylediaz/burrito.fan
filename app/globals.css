@@ -16,11 +16,6 @@ body {
 body {
     color: var(--foreground);
     background: var(--background);
-    --font-mono: Space Mono, monospace;
-    --font-sans: Helvetica Neue, sans-serif;
-    font-family:
-        Space Mono,
-        monospace;
     scroll-behavior: smooth;
     overflow: hidden;
 }
