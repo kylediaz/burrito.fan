@@ -7,7 +7,7 @@ import { Position } from "geojson";
 
 import opentype, { Path } from "opentype.js";
 
-const font = opentype.loadSync("./private/SpaceMono-Regular.ttf");
+const font = opentype.loadSync("./public/SpaceMono-Regular.ttf");
 
 export function textToPolygon(
   text: string,
