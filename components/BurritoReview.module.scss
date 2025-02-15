@@ -1,13 +1,22 @@
 .container {
-    transition: background-color 0.3s ease;
+    max-height: 280 * 2px;
+    overflow-y: scroll;
+    margin-bottom: -15px;
+}
 
-    &.focused .restaurantName {
-        text-decoration: underline;
-    }
-
-    .restaurantName {
-        font-size: 29px;
-        line-height: 33px;
-    }
+.reviewBody {
+    line-height: 1.4;
     margin-bottom: 4em;
+    p {
+        margin-bottom: 0.75em;
+    }
+
+    ul,
+    ol {
+        list-style-type: square;
+        li {
+            margin-left: 0.9em;
+            margin-bottom: 0.5em;
+        }
+    }
 }

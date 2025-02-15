@@ -1,6 +1,7 @@
 "use client";
 
 import React, { Component } from "react";
+import { renderToString } from "react-dom/server";
 
 import mapboxgl, { Marker, LngLat } from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
@@ -8,8 +9,9 @@ import { Position } from "geojson";
 
 import styles from "./Map.module.scss";
 import { BurritoReviewModel } from "./types";
-import { createMarker } from "../components/Marker";
+import { createMarker } from "@/components/Marker";
 import { onMobile } from "./util";
+import BurritoReview from "@/components/BurritoReview";
 
 mapboxgl.accessToken = process.env.NEXT_PUBLIC_MAPBOX_TOKEN;
 
@@ -32,18 +34,25 @@ class Map extends Component<Props> {
   componentDidMount() {
     const { burritos, drawing } = this.props as Props;
 
-    this.markers = burritos.map((burrito: BurritoReviewModel) =>
-      createMarker({ burrito }),
-    );
-
     const map = new mapboxgl.Map({
       container: "map",
       style: process.env.NEXT_PUBLIC_MAPBOX_STYLE,
       center: [-99.7129, 40.0902],
-      zoom: onMobile() ? 2 : 3,
+      zoom: onMobile() ? 2 : 4,
       minZoom: 2,
     });
     this.map = map;
+
+    this.markers = burritos.map((burrito: BurritoReviewModel) => {
+      const marker = createMarker({ burrito });
+      const popupHTML = renderToString(<BurritoReview burrito={burrito} />);
+      const popup = new mapboxgl.Popup()
+        .setLngLat(marker.getLngLat())
+        .setHTML(popupHTML)
+        .addTo(map);
+      marker.setPopup(popup);
+      return marker;
+    });
 
     this.markers
       // Sort so further markers are rendered behind nearer markers
