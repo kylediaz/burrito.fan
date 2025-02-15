@@ -9,9 +9,13 @@ import { BurritoReviewModel } from "../app/types";
 Note that this is not a react component.
 */
 export function createMarker({ burrito }: { burrito: BurritoReviewModel }) {
-  const size = 48;
+  let size = 48;
+  if (burrito.rating > 4) {
+    size = 128;
+  }
   const container = document.createElement("div");
   container.className = styles.markerContainer;
+  container.style.setProperty("--marker-size", `${size}px`);
 
   const marker = document.createElement("div");
   marker.classList.add(styles.marker);
