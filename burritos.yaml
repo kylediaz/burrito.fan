@@ -62,11 +62,14 @@
   lat: 37.7508961
   name: La Taqueria
   date: "2022-06-25"
-  count: 1
+  count: 2
+  order: Carne Asada burrito w/ everything
   rating: 5
   description: |
     <p>This is where the famous Mission Burrito was invented. My friends and I took a pilgrimage to this holy site.</p>
     <p>It truly lived up to its hype.</p>
+    <hr>
+    <p>Revisted on 03/13/2025. It was just as good as I remember.</p>
 
 - long: -122.0243301
   lat: 37.362133
@@ -730,3 +733,34 @@
   description:
     <p>I decided to give Electric Burrito another chance. Maybe I just didn't "get it" the first time</p>
     <p>I still wasn't that impressed. I don't dislike rice in my burrito but this one had too much rice.</p>
+
+- long: -73.33216719756695
+  lat: 40.83742416281928
+  name: Taco Spot
+  date: 2025-03-08
+  count: 1
+  order: Steak Burrito
+  rating: 3
+  description:
+    <p>Lobotomy burrito. I was in an accident and got a severe concussion and a broken arm. My friends brought me this burrito when I got out of the hospital.</p>
+    <p>It was good.</p>
+
+- long: -122.41030545965498
+  lat: 37.7819630903996
+  name: Taqueria Cancun
+  date: 2025-03-12
+  count: 1
+  order: Burrito Mojado (A Big One)
+  rating: 2
+  description:
+    <p>I went to SF for two days for an onsite interview. I ate this burrito the night before the interview.</p>
+    <p>When they served me this burrito I knew I'd regret it. It was covered in so much sauce it looked like somone threw up on it. The underlying burrito was somehow dry even though it was supposed to be a wet burrito.</p>
+
+- long: -122.41139330071191
+  lat: 37.752562669818246
+  name: Tortas Los Picudos
+  date: 2025-03-13
+  count: 1
+  order: Steak Burrito, no rice
+  rating: 4
+  description: <p>I ate this burrito right after my onsite. It was good.</p>
