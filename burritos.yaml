@@ -354,7 +354,7 @@
   lat: 40.72506757274651
   name: El Diablito Taqueria
   date: 2024-07-10
-  count: 3
+  count: 4
   order: El Diabalito (Spicy Chorizo), Carnitas with guac, Birria with guac
   rating: 4.5
   description: |
@@ -764,3 +764,13 @@
   order: Steak Burrito, no rice
   rating: 4
   description: <p>I ate this burrito right after my onsite. It was good.</p>
+
+- long: -74.00746558642591
+  lat: 40.70744641613193
+  name: Mezcali
+  date: 2025-03-13
+  count: 1
+  order: California Burrito
+  rating: 4.7
+  description: <p>This burrito cost $30, but it was worth it.</p>
+    <p>They used a high quality cut of beef for the steak. Instead of using french fries, they used potato hash which I thought was great. No rice, which a lot of people prefer.</p>
