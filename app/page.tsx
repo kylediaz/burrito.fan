@@ -4,7 +4,7 @@ import burritosRaw from "./burritos.json";
 import Map from "./Map";
 import { BurritoReviewModel } from "./types";
 import { bigOverSmallText } from "./cartographer";
-import { formatNumberWithCommas, metersOfRicePerBurrito } from "./util";
+import { formatNumberWithCommas } from "./util";
 import Preloader from "@/components/Preloader";
 
 const burritos: BurritoReviewModel[] = burritosRaw
@@ -69,19 +69,6 @@ polygons.push(
     6,
     fontHeightToWidthRatio,
     1,
-  ),
-);
-
-const totalRiceLength = Math.ceil(metersOfRicePerBurrito * totalBurritosEaten);
-polygons.push(
-  ...bigOverSmallText(
-    `${totalRiceLength}`,
-    `meters of rice devoured`.toUpperCase(),
-    [122.68790067829698, -29],
-    10,
-    2,
-    fontHeightToWidthRatio,
-    0.5,
   ),
 );
 
