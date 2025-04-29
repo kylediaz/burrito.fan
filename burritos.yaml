@@ -774,3 +774,30 @@
   rating: 4.7
   description: <p>This burrito cost $30, but it was worth it.</p>
     <p>They used a high quality cut of beef for the steak. Instead of using french fries, they used potato hash which I thought was great. No rice, which a lot of people prefer.</p>
+
+- long: -122.4196697850688
+  lat: 37.7629282655274
+  name: La Oaxaqueña
+  date: 2025-03-23
+  count: 3
+  order: Cabeza Super burrito, Lengua Super Burrito, Lengua California Burrito
+  rating: 4.4
+  description: <p>Pretty good.</p>
+
+- long: -122.41794530188344
+  lat: 37.78401456520941
+  name: Los 3 Cachanillas
+  date: 2025-03-25
+  count: 1
+  order: Asada Burrito
+  rating: 3
+  description: <p>It was ok.</p>
+
+- long: -122.42111054170674
+  lat: 37.76485730621341
+  name: Pancho Villa Taqueria
+  date: 2025-03-28
+  count: 1
+  order: Asada Burrito
+  rating: 3
+  description: <p>It was ok.</p><p>The rice in the burrito was pretty good</p>
