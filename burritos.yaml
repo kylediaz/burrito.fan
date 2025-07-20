@@ -855,3 +855,30 @@
   order: Pincipe Maya Burrito
   rating: 4
   description: <p>This was more like a wrap than a burrito, but it was pretty good.</p>
+
+- long: -122.41114798813291
+  lat: 37.75278707890429
+  name: Taqueria El Farolito
+  date: 2025-07-14
+  count: 1
+  order: Tripas Burrito
+  rating: 4.8
+  description: <p>The best burrito you'll get at this price.</p>
+
+- long: -122.41617883532095
+  lat: 37.76845985643338
+  name: El Alambre #2
+  date: 2025-07-17
+  count: 1
+  order: Birri Super Burrito
+  rating: 4
+  description: <p>Dorado style by default. I'm not sure how they make their tortillas, but they taste like scallion pancakes.</p>
+
+- long: -122.41259491224712
+  lat: 37.75242798679401
+  name: Taqueria Vallarta
+  date: 2025-07-18
+  count: 1
+  order: Barbacoa Burrito
+  rating: 4.4
+  description: <p>It was good.</p>
