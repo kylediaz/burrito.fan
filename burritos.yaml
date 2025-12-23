@@ -891,3 +891,27 @@
   order: The Senor Sisig Burrito w/ Pork Sisig
   rating: 4
   description: <p>It was good.</p>
+
+- long: -122.41503265047744
+  lat: 37.7525832020353
+  name: Taqueria Guadalajara
+  date: 2025-12-18
+  order: Cabeza Burrito
+  rating: 4
+  description: <p>It was good</p>
+
+- long: -122.42114151996205
+  lat: 37.76480426034115
+  name: Taqueria Pancho Villa
+  date: 2025-12-20
+  order: Cartinas Burrito
+  rating: 3
+  description: This Taqueria won awards for their salsa from 2007-2014, but not anything recently. The salsa was good. The burrito was ok.
+
+- long: -122.4192270840588
+  lat: 37.7620415116184
+  name: Chome
+  date: 2025-12-20
+  order: Carne Asada Burrito
+  rating: 3.5
+  description: PG&E had a fire so 130,000 people in San Francisco lost power this day, including me. I went for a walk and stumbled upon this restaurant which I never saw before. I spoke to the owners, and they said they only opened that week. Both their burrito and their self-proclaimed best item on the menu were well made, but they tasted like they were missing something. Perhaps sauce?
