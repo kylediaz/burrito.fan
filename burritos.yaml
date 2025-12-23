@@ -793,9 +793,9 @@
   rating: 3
   description: <p>It was ok.</p>
 
-- long: -122.42111054170674
-  lat: 37.76485730621341
-  name: Pancho Villa Taqueria
+- long: -122.42169071272247
+  lat: 37.76459112903185
+  name: La Cumbre Taqueria
   date: 2025-04-28
   count: 1
   order: Asada Burrito
@@ -847,6 +847,14 @@
   rating: 3
   description: <p>I got this burrito after YC AI Startup School. It was ok.</p>
 
+- long: -122.40962305801408
+  lat: 37.75579201041402
+  name: El Metate
+  date: 2025-08-01
+  count: 2
+  rating: 4
+  description: It was pretty good
+
 - long: -122.41943470544092
   lat: 37.755535818789475
   name: Al Carajo
@@ -896,6 +904,7 @@
   lat: 37.7525832020353
   name: Taqueria Guadalajara
   date: 2025-12-18
+  count: 1
   order: Cabeza Burrito
   rating: 4
   description: <p>It was good</p>
@@ -904,6 +913,7 @@
   lat: 37.76480426034115
   name: Taqueria Pancho Villa
   date: 2025-12-20
+  count: 1
   order: Cartinas Burrito
   rating: 3
   description: This Taqueria won awards for their salsa from 2007-2014, but not anything recently. The salsa was good. The burrito was ok.
@@ -912,6 +922,7 @@
   lat: 37.7620415116184
   name: Chome
   date: 2025-12-20
+  count: 1
   order: Carne Asada Burrito
   rating: 3.5
   description: PG&E had a fire so 130,000 people in San Francisco lost power this day, including me. I went for a walk and stumbled upon this restaurant which I never saw before. I spoke to the owners, and they said they only opened that week. Both their burrito and their self-proclaimed best item on the menu were well made, but they tasted like they were missing something. Perhaps sauce?
