@@ -1,8 +1,10 @@
 import { Position } from "geojson";
+import dynamic from "next/dynamic";
 
 import burritosRaw from "./burritos.json";
-import Map from "./Map";
 import { BurritoReviewModel } from "./types";
+
+const Map = dynamic(() => import("./Map"));
 import { bigOverSmallText } from "./cartographer";
 import { formatNumberWithCommas } from "./util";
 import Preloader from "@/components/Preloader";
