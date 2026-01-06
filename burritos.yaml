@@ -935,3 +935,12 @@
   order: Carne Asada Burrito
   rating: 3.5
   description: PG&E had a fire so 130,000 people in San Francisco lost power this day, including me. I went for a walk and stumbled upon this restaurant which I never saw before. I spoke to the owners, and they said they only opened that week. Both their burrito and their self-proclaimed best item on the menu were well made, but they tasted like they were missing something. Perhaps sauce?
+
+- long: -122.41445419601428
+  lat: 37.7854742250212
+  name: El Tesoro Taqueria and Grill
+  date: 2025-01-02
+  order: Cabeza Burrito
+  count: 1
+  rating: 4
+  description: <p>it was good</p>
