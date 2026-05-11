@@ -816,8 +816,8 @@
   lat: 37.762212820114556
   name: El Tepa Taqueria
   date: 2025-05-08
-  count: 6
-  order: Steak Burrito, Steak and Prawn Super Burrito
+  count: 12
+  order: Steak Burrito, Steak and Prawn Super Burrito, Chile Verde
   rating: 4
   description: <p>The Steak and prawn super burrito is pretty good</p>
 
@@ -825,8 +825,8 @@
   lat: 37.76186288662824
   name: Taqueria El Buen Sabor
   date: 2025-05-22
-  count: 1
-  order: Lengua Burrito
+  count: 3
+  order: Lengua Burrito x2, Carna Asada
   rating: 3
   description: <p>It was good.</p>
 
@@ -1011,6 +1011,6 @@
   name: Cocina Mayah
   date: 2026-03-10
   order: Poc Chuc Burrito
-  count: 2
+  count: 4
   rating: 4.4
   description: <p>Pretty good</p>
