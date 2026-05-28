@@ -62,7 +62,7 @@
   lat: 37.7508961
   name: La Taqueria
   date: "2022-06-25"
-  count: 2
+  count: 3
   order: Carne Asada burrito w/ everything
   rating: 5
   description: |
@@ -816,7 +816,7 @@
   lat: 37.762212820114556
   name: El Tepa Taqueria
   date: 2025-05-08
-  count: 12
+  count: 23
   order: Steak Burrito, Steak and Prawn Super Burrito, Chile Verde
   rating: 4
   description: <p>The Steak and prawn super burrito is pretty good</p>
@@ -937,12 +937,12 @@
 
 - long: -122.4192270840588
   lat: 37.7620415116184
-  name: Chome
+  name: Cemitas Mane Mane
   date: 2025-12-20
-  count: 1
+  count: 2
   order: Carne Asada Burrito
   rating: 3.5
-  description: PG&E had a fire so 130,000 people in San Francisco lost power this day, including me. I went for a walk and stumbled upon this restaurant which I never saw before. I spoke to the owners, and they said they only opened that week. Both their burrito and their self-proclaimed best item on the menu were well made, but they tasted like they were missing something. Perhaps sauce?
+  description: <p>PG&E had a fire so 130,000 people in San Francisco lost power this day, including me. I went for a walk and stumbled upon this restaurant which I never saw before. I spoke to the owners, and they said they only opened that week. Both their burrito and their self-proclaimed best item on the menu were well made, but they tasted like they were missing something. Perhaps sauce?</p> <p>A few months after they opened, I never see them get much business.</p>
 
 - long: -122.41445419601428
   lat: 37.7854742250212
@@ -983,7 +983,7 @@
 - long: -122.41141101792958
   lat: 37.752774882571096
   name: La Vaca Birria
-  date: 2026
+  date: "2026"
   order: Birria Burrito
   count: 1
   rating: 4
@@ -1014,3 +1014,12 @@
   count: 4
   rating: 4.4
   description: <p>Pretty good</p>
+
+- long: -122.4145911864041
+  lat: 37.75984316087575
+  name: Chuy's Fiestas
+  date: 2026-05-26
+  order: Birria Super Birrito
+  count: 1
+  rating: 3.5
+  description: <p>We've had El Tepa so many times for lunch that I wanted to try something new. I couldn't tell if this burrito was better or if it was just novelty bias.</p><D-s>
