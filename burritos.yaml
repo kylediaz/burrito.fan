@@ -826,7 +826,7 @@
   name: Taqueria El Buen Sabor
   date: 2025-05-22
   count: 3
-  order: Lengua Burrito x2, Carna Asada
+  order: Lengua Burrito x2, Carne Asada
   rating: 3
   description: <p>It was good.</p>
 
@@ -1023,3 +1023,11 @@
   count: 1
   rating: 3.5
   description: <p>We've had El Tepa so many times for lunch that I wanted to try something new. I couldn't tell if this burrito was better or if it was just novelty bias.</p><D-s>
+
+- long: -122.41972037982113
+  lat: 37.76357348985028
+  name: New Castillito Taqueria
+  order: Lengua Burrito
+  count: 1
+  rating: 3
+  description: Kinda slimy
