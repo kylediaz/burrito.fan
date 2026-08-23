@@ -980,6 +980,15 @@
   rating: 1.5
   description: <p>I couldn't finish it. I've never seen that many people in this restaurant, even during lunch rush. Everyone goes to El Tepa instead. I understand why.</p>
 
+- long: -122.4187539692663
+  lat: 37.757270919180314
+  name: El Rey Taquiza Artesanal
+  date: "2026"
+  order: Burrito
+  count: 1
+  rating: 2.5
+  description: Don't recall
+
 - long: -122.41866076787664
   lat: 37.751736513712466
   name: Taqueria Los Altos
