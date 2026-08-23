@@ -798,9 +798,9 @@
   lat: 37.76459112903185
   name: La Cumbre Taqueria
   date: 2025-04-28
-  count: 1
+  count: 2
   order: Asada Burrito
-  rating: 3
+  rating: 3.5
   description: <p>It was ok.</p><p>The rice in the burrito was pretty good</p>
 
 - long: -122.41674589823474
@@ -944,6 +944,15 @@
   rating: 3.5
   description: <p>PG&E had a fire so 130,000 people in San Francisco lost power this day, including me. I went for a walk and stumbled upon this restaurant which I never saw before. I spoke to the owners, and they said they only opened that week. Both their burrito and their self-proclaimed best item on the menu were well made, but they tasted like they were missing something. Perhaps sauce?</p> <p>A few months after they opened, I never see them get much business.</p>
 
+- long: 37.752890270566574
+  lat: -122.40997855917988
+  name: La Palma Mexicatessen
+  date: 2025-12
+  count: 1
+  order: Burrito
+  rating: 2.5
+  description: Don't recall
+
 - long: -122.41445419601428
   lat: 37.7854742250212
   name: El Tesoro Taqueria and Grill
@@ -992,10 +1001,10 @@
 - long: -122.4194287873337
   lat: 37.7604947755082
   name: Taqueria Cancun
-  order: Al Pastor Burrito
-  count: 1
+  order: Al Pastor Burrito, Cabeza Burrito Mojado
+  count: 4
   rating: 3.5
-  description: <p>The very first burrito I had in SF was from Taqueria Cancun in the Tenderloin. It was horrible. My coworker told me that this one was different and the burritos here are amazing. It was a lot better and this burrito was massive -- but I wouldn't consider it anything special</p>.
+  description: The very first burrito I had in SF was from Taqueria Cancun in the Tenderloin. It was horrible. My coworker told me that this one was different and the burritos here are amazing. It was a lot better and this burrito was massive -- but I wouldn't consider it anything special. <br> Update - I tried it a few more times and it grew on me.
 
 - long: -122.40708860902517
   lat: 37.79846579577534
@@ -1035,7 +1044,51 @@
 - long: -122.42038023334071
   lat: 37.75523793947284
   name: Breakfast Little
+  date: 2026-06-08
   order: Tia Maria
   count: 1
   rating: 4
   description: Pretty good
+
+- long: -122.41337177830843
+  lat: 37.76884188607492
+  name: El Tonayense
+  order: Lengua Burrito
+  count: 1
+  rating: 3.8
+  description: Pretty good
+
+- long: 37.75756378520325
+  lat: -122.4187319011914
+  name: Loltun Restaurant
+  order: Burrito
+  count: 1
+  rating: 3.8
+  description: Pretty good
+
+- long: -122.42098167855835
+  lat: 37.75709414350953
+  name: Sarita’s Grill & Beer
+  date: 2026-08-20
+  order: Carnitas Burrito
+  count: 1
+  rating: 3.5
+  description: Pretty good. This was the first time I really noticed that some restaurants have been putting chicharrones in burritos for a slight crunch. Pretty good.
+
+- long: -122.42107436702128
+  lat: 37.75201021524681
+  name: Papalote
+  date: 2026-08-21
+  order: Carne Asada Super Burrito
+  count: 1
+  rating: 3.5
+  description: This restaurant has a very popular salsa sold in stores. The salsa itself tasted pretty good, but they gave you a very small amount -- not enough for both the chips and the burrito. The burrito itself was mid.
+
+- long: -122.41842409738466
+  lat: 37.75342384499141
+  name: La Corneta Taqueria
+  date: 2026-08-22
+  order: Carne Asada Super Burrito w/ Black Beans
+  count: 1
+  rating: 3
+  description: Frequently rated as one of the top burritos in SF. It was ok.
