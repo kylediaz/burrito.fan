@@ -998,6 +998,24 @@
   rating: 3.5
   description: <p>it was good</p>
 
+- long: -122.39479558534688
+  lat: 37.780585153345775
+  name: Some taco truck
+  date: 2026-02-13
+  order: Al Pastor Burrito
+  count: 1
+  rating: 3.5
+  description: A startup founder bought me this burrito in exchange for consulting on evals.
+
+- long: -122.39605518252317
+  lat: 37.78178458376587
+  name: Garaje
+  date: 2026-03-09
+  order: The OG Zapato
+  count: 1
+  rating: 3.5
+  description: Very nontraditional. It was good.
+
 - long: -122.41141101792958
   lat: 37.752774882571096
   name: La Vaca Birria
@@ -1101,3 +1119,12 @@
   count: 1
   rating: 3
   description: Frequently rated as one of the top burritos in SF. It was ok.
+
+- long: -122.41819461237719
+  lat: 37.75159297805113
+  name: Taqueria San Jose
+  date: 2026-08-23
+  order: Cabeza Super Burrito
+  count: 1
+  rating: 4.4
+  description: Amazing flavor. Can't pinpoint what exactly they did to make it taste so good.
